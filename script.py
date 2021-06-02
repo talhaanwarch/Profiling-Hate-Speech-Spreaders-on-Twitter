@@ -9,11 +9,18 @@ from glob import glob
 import pandas as pd
 import numpy as np
 data=[]
+acc=[]
 for csv in glob('submissions/English/*.csv'):
+    acc.append(np.round(float(csv.split('_')[1][0:-4]),3))
     data.append(pd.read_csv(csv).iloc[:,-1])
     
-mean=np.mean(data,0)
+mean=np.average(data,axis=0,weights=acc)
 mean=np.where(mean>0.5,1,0)
+
+unique, counts = np.unique(mean, return_counts=True)
+print(dict(zip(unique, counts)))
+
+
 df=pd.read_csv(csv)
 df.type=mean
 import os 
