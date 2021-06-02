@@ -6,10 +6,10 @@ Hate speech (HS) is commonly defined as any communication that disparages a pers
 After having addressed several aspects of author profiling in social media from 2013 to 2020 (fake news spreaders, bot detection, age and gender, also together with personality, gender and language variety, and gender from a multimodality perspective), this year we aim at investigating if it is possbile to discriminate authors that have shared some hate speech in the past from those that, to the best of our knowledge, have never done it.
 
 ## Dataset  
-Data is taken from [PAN website(https://pan.webis.de/clef21/pan21-web/author-profiling.html)
+Data is taken from [PAN website](https://pan.webis.de/clef21/pan21-web/author-profiling.html)
 The data uploaded on this github repo is password protected. You need to replace it with your data.   
-Structure of folder can be as followed:
-train 
+Structure of folder can be as followed:  
+train   
 -en  
 -es  
 test  
@@ -20,3 +20,11 @@ If you made your data password protected, you need to provide password. Otherwis
 ## Codes
 In order to reproduce the result, run all notebooks presents in for a particualar task. Each notebook produce two csv files.
 Put all csv files produced by all notebooks of a particular task and run the script.py file to average the predictions. 
+
+## Result
+### Validation result  
+Five fold cross validation result  
+English: 75%   
+Spanish: 85%   
+### Test result 
+TBA
