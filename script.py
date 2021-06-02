@@ -10,7 +10,10 @@ import pandas as pd
 import numpy as np
 data=[]
 acc=[]
-for csv in glob('submissions/English/*.csv'):
+
+language='Spanish'
+
+for csv in glob('submissions/{}/*.csv'.format(language)):
     acc.append(np.round(float(csv.split('_')[1][0:-4]),3))
     data.append(pd.read_csv(csv).iloc[:,-1])
     
@@ -24,7 +27,7 @@ print(dict(zip(unique, counts)))
 df=pd.read_csv(csv)
 df.type=mean
 import os 
-os.makedirs('submissions/English/output')
+os.makedirs('submissions/{}/output'.format(language))
 
 for row in df.index:
     xml = []
@@ -33,6 +36,6 @@ for row in df.index:
     xml.append('type="{}"'.format(df.loc[row,'type']))
     xml.append('/>')
     x='\n'.join(xml)
-    myfile = open("submissions/English/output/{}.xml".format(df.loc[row,'author-id']), "w")
+    myfile = open("submissions/{}/output/{}.xml".format(language,df.loc[row,'author-id']), "w")
     myfile.write(x)
     myfile.close()

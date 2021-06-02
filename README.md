@@ -7,5 +7,16 @@ After having addressed several aspects of author profiling in social media from 
 
 ## Dataset  
 Data is taken from [PAN website(https://pan.webis.de/clef21/pan21-web/author-profiling.html)
+The data uploaded on this github repo is password protected. You need to replace it with your data.   
+Structure of folder can be as followed:
+train 
+-en  
+-es  
+test  
+-en  
+-es  
+If you made your data password protected, you need to provide password. Otherwise skip password parameter while unzipping the file.
 
 ## Codes
+In order to reproduce the result, run all notebooks presents in for a particualar task. Each notebook produce two csv files.
+Put all csv files produced by all notebooks of a particular task and run the script.py file to average the predictions. 
