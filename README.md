@@ -24,4 +24,12 @@ English: 72%
 Spanish: 82%
 
 ### Paper  
-TBA 
+```
+@inproceedings{anwar2021identify,
+  title={Identify Hate Speech Spreaders on Twitter using Transformer Embeddings Features and AutoML Classifiers.},
+  author={Anwar, Talha},
+  booktitle={CLEF (Working Notes)},
+  pages={1808--1812},
+  year={2021}
+}
+```
